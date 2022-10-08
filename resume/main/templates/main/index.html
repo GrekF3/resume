@@ -87,7 +87,7 @@ Start Content
           <div class="progressCol">
             <div class="progressCard">
               {% for sk in me.userprofile.skills.all %}
-              {% if sk.is_key_skill %}
+              {% if sk.is_key_skill == False %}
               <div class="progressCol">
                 <span class="progressLbl">{{sk.name}}</span>
                 <div class="row g-2 align-items-center">
@@ -103,7 +103,7 @@ Start Content
               </div>
               {% endif %}
               {% endfor %}
-              
+
             </div>
           </div>
         </div>
@@ -117,9 +117,8 @@ Start Content
     <div class="container">
       <div class="row pb-3">
         <div class="col">
-          <h4 class="smText regular">Сертификаты</h4>
+          <h4 class="smText regular">Сертификаты:</h4>
         </div>
-
       </div>
       <div class="sliderOuter">
         <div class="swiper certificatesSlider">
@@ -140,9 +139,9 @@ Start Content
             </div>
             {% endif %}
             {% endfor %}
-            
+
           </div>
-        </div>            
+        </div>
         <div class="cert-swiper-button-next swiper-button-next swiperBtnStyle"></div>
         <div class="cert-swiper-button-prev swiper-button-prev swiperBtnStyle"></div>
         <div class="swiper-pagination swiperPaginationStyle posInitial"></div>
@@ -185,7 +184,7 @@ Start Content
         </div>
         {% endif %}
         {% endfor %}
-        
+
       </div>
       <div class="testimonialCol">
         <h4 class="smText regular d-block">Отзывы обо мне:</h4>
@@ -231,7 +230,7 @@ Start Content
     <div class="container">
       <div class="row pb-3">
         <div class="col">
-          <h4 class="smText regular">Последний пост</h4>
+          <h4 class="smText regular">Последний пост:</h4>
         </div>
         <div class="col-auto">
           <a href="{% url 'main:blogs' %}" class="simpleLink">Посмотреть все</a>

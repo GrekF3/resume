@@ -20,8 +20,8 @@ class Skill(models.Model):
 
 class UserProfile(models.Model):
     class Meta:
-        verbose_name_plural = 'Профили'
-        verbose_name = 'Профиль'
+        verbose_name_plural = 'Основной профиль'
+        verbose_name = 'Основной профиль'
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(blank=True, null=True, upload_to="avatar")
@@ -36,14 +36,14 @@ class UserProfile(models.Model):
 
 class ContactProfile(models.Model):
     class Meta:
-        verbose_name_plural = 'Сообщения'
-        verbose_name = 'Сообщение'
+        verbose_name_plural = 'Контакты'
+        verbose_name = 'Контакты'
         ordering = ["timestamp"]
 
     timestamp = models.DateTimeField(auto_now_add=True)
-    name = models.CharField(verbose_name="Name", max_length=100)
-    email = models.EmailField(verbose_name="Email")
-    message = models.TextField(verbose_name="Message")
+    name = models.CharField(verbose_name="Имя", max_length=100)
+    email = models.EmailField(verbose_name="Почта")
+    message = models.TextField(verbose_name="Сообщение")
 
     def __str__(self):
         return f'{self.name}'
@@ -67,7 +67,7 @@ class Testimonial(models.Model):
 
 class Media(models.Model):
     class Meta:
-        verbose_name_plural = 'Медиа файлы'
+        verbose_name_plural = 'Медиа Файлы'
         verbose_name = 'Медиа'
         ordering = ["name"]
 
@@ -87,8 +87,8 @@ class Media(models.Model):
 
 class Portfolio(models.Model):
     class Meta:
-        verbose_name_plural = 'Проекты портфолио'
-        verbose_name = 'Портфолио'
+        verbose_name_plural = 'Портфолио'
+        verbose_name = 'Проект'
         ordering = ["name"]
 
     date = models.DateTimeField(blank=True, null=True)
@@ -151,3 +151,4 @@ class Certificate(models.Model):
 
     def __str__(self):
         return self.name
+

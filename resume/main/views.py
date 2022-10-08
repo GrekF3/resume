@@ -24,10 +24,10 @@ class IndexView(generic.TemplateView):
         blogs = Blog.objects.filter(is_active=True)
         portfolio = Portfolio.objects.filter(is_active=True)
 
-        context["Отзывы"] = testimonials
-        context["Сертификаты"] = certificates
-        context["Посты"] = blogs
-        context["Портфолио"] = portfolio
+        context["testimonials"] = testimonials
+        context["certificates"] = certificates
+        context["blogs"] = blogs
+        context["portfolio"] = portfolio
         return context
 
 
