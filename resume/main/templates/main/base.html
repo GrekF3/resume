@@ -14,17 +14,12 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.svg' %}">
     <link rel="apple-touch-icon" type="image/jpg" href="{% static 'images/icon.svg' %}">
-
-    <!-- ================================
-    Start CSS
-    ================================= -->
+<!--    CSS-->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     {% block extend_header%}{%endblock%}
-    <!-- ================================
-    End CSS
-    ================================= -->
+<!--    CSS END-->
 
   </head>
   <body>
@@ -36,16 +31,12 @@
 
     {% include 'main/partials/footer.html' %}
 
-    <!-- ================================
-    Start Scripts
-    ================================= -->
+<!--    SCRIPTS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
     {% block extend_footer %}{%endblock%}
-    <!-- ================================
-    End Scripts
-    ================================= -->
+<!--  SCRIPTS END-->
   </body>
 </html>
